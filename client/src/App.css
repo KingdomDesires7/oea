@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
+.mainContainer {
+  height: 100vh;
+  width: 100vw;
+  background: #7b92a8;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.iPadShellContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.iPadShell {
+  height: calc(1059.84px * 0.77);
+  width: calc(812.16px * 0.77);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.iPadContentSpace {
+  width: 93.6%;
+  height: 85.9%;
+}
+
+.consumerTemplate {
+  height: 100%;
+  width: 100%;
+}
+
+.omniPanelContainer {
+  height: 9.2%;
+  position: absolute;
+  width: 92.6%;
+  top: 58px;
+}
+
+.omniPanel {
+  height: 50%;
+
+}
+
+.omniSearch {
+
+}
+
+.omniSearch {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.dockContainer {
+  position: relative;
+  border: 2px solid pink;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dock {
+  font-family: Orpheus-Pro;
 }

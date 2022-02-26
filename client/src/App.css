@@ -1,7 +1,21 @@
+* {
+  font-family: Orpheus-Pro;
+}
+
 .mainContainer {
   height: 100vh;
   width: 100vw;
   background: #7b92a8;
+}
+
+.tree {
+  height: 23px;
+  width: 23px;
+  position: absolute;
+}
+
+.tree:hover {
+  transform: scale(1.2);
 }
 
 .iPadShellContainer {
@@ -21,26 +35,39 @@
   align-items: center;
 }
 
+.treeContainer {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 142px;
+  justify-content: center;
+}
+
 .iPadContentSpace {
-  width: 93.6%;
-  height: 85.9%;
+  width: 585.3px;
+  height: 700px;
+  margin-top: 45px;
 }
 
 .consumerTemplate {
-  height: 100%;
-  width: 100%;
+  width: 585.3px;
+  height: 700px;
+  top: 98px;
+  position: absolute;
 }
 
 .omniPanelContainer {
   height: 9.2%;
   position: absolute;
-  width: 92.6%;
-  top: 58px;
+  width: 91.1%;
+  top: 28px;
 }
 
 .omniPanel {
   height: 50%;
-
+  bottom: 1px;
+  position: relative;
 }
 
 .omniSearch {
@@ -50,18 +77,24 @@
 .omniSearch {
   width: 100%;
   height: 100%;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 .dockContainer {
   position: relative;
-  border: 2px solid pink;
   height: 100%;
   display: flex;
+  background: rgb(81, 81, 81);
   justify-content: center;
   align-items: center;
 }
 
 .dock {
+  cursor:crosshair;
   font-family: Orpheus-Pro;
+  /* color: #4be2e2;  */
+  /* Neon Cyan^ */
+  color: #0fefef; 
+  font-size: 21px;
+  /* Crisp's Cyan^ */
 }

@@ -128,7 +128,8 @@
 
 .dock {
   font-family: Orpheus-Pro;
-  color: #0fefef;
+  /* color: #0fefef; */
+  color: #5ab3a7;
   font-size: 21px;
   bottom: 3px;
   position: relative;
@@ -138,7 +139,8 @@
   display: flex;
   justify-content: center;
   font-family: Orpheus-Pro;
-  color: #0fefef;
+  /* color: #0fefef; */
+  color: #5ab3a7;
   font-size: 21px;
   bottom: 3px;
   position: relative;

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './tree.css';
+import './Tree.css';
 
 function App() {
   const [omniLabel, setOmniLabel] = useState('Omnibox Extension App')

@@ -1,26 +1,26 @@
 import React, {useState} from 'react';
-import Router from './Router';
-import Routes from './routes';
-import './App.css';
-import iPadProFrame from './assets/images/iPadProFrame.png';
+// import Router from './Router';
+// import Routes from './routes';
+import './Home.css';
+import iPadProFrame from '../../assets/images/iPadProFrame.png';
 import { Link } from 'react-router-dom'; 
-import Consumer from './assets/images/Consumer.png';
-import Business from './assets/images/Business.png';
-import SearchBar from './assets/images/SearchBar.png';
-import tree from './assets/images/icons/tree.png';
-import nextTemplate from './assets/images/uDock/next-template.svg';
-import previousTemplate from './assets/images/uDock/previous-template.svg';
-import balloonWrench from './assets/images/uDock/balloon-wrench.png';
-import balloonWrenchFilled from './assets/images/uDock/balloon-wrench-filled.png';
-import earth from './assets/images/uDock/earth.png';
-import earthFilled from './assets/images/uDock/earth-filled.png';
-import clock from './assets/images/uDock/clock.png';
-import clockFilled from './assets/images/uDock/clock-filled.png';
-import eye from './assets/images/uDock/eye.png';
-import eyeFilled from './assets/images/uDock/eye-filled.png';
-import rotate from './assets/images/uDock/rotate.png';
+import Consumer from '../../assets/images/Consumer.png';
+import Business from '../../assets/images/Business.png';
+import SearchBar from '../../assets/images/SearchBar.png';
+import tree from '../../assets/images/icons/tree.png';
+import nextTemplate from '../../assets/images/uDock/next-template.svg';
+import previousTemplate from '../../assets/images/uDock/previous-template.svg';
+import balloonWrench from '../../assets/images/uDock/balloon-wrench.png';
+// import balloonWrenchFilled from '../../assets/images/uDock/balloon-wrench-filled.png';
+import earth from '../../assets/images/uDock/earth.png';
+// import earthFilled from '../../assets/images/uDock/earth-filled.png';
+import clock from '../../assets/images/uDock/clock.png';
+// import clockFilled from '../../assets/images/uDock/clock-filled.png';
+import eye from '../../assets/images/uDock/eye.png';
+// import eyeFilled from '../../assets/images/uDock/eye-filled.png';
+import rotate from '../../assets/images/uDock/rotate.png';
 
-function App() {
+function Home() {
   const [omniLabel, setOmniLabel] = useState('Omnibox Extension App')
   const [dockVisible, setDockVisible] = useState(false)
   const [consumerVisible, setConsumerVisible] = useState(true)
@@ -52,11 +52,9 @@ function App() {
   }
 
   const treeClicked = () => {
-    alert('tree')
   }
 
   return (
-    <Router history={history}>
     <div className="mainContainer">
         <div className="iPadShellContainer">
         <img src={iPadProFrame} className="iPadShell" alt="" />
@@ -67,9 +65,6 @@ function App() {
                 <div className="omniSearch">
                 <img src={SearchBar} className="omniSearch" alt="" />
                 </div>
-
-
-
                 {dockVisible ? 
                 <div onMouseEnter={() => mouseOverDock()} onMouseLeave={()=>mouseLeaveDock()} className="dockContainer">
                   
@@ -118,11 +113,9 @@ function App() {
                 { consumerVisible ?
                 <>
               <img src={Consumer} className="consumerTemplate" alt="" />
-              <Link to='/tree'>
                 <div onClick={()=>treeClicked()} onMouseEnter={() => mouseOverIcon('tree')} onMouseLeave={() => mouseLeaveIcon()} className="treeContainerC">
                   <img src={tree} alt='' className="tree" />
                 </div> 
-              </Link>
               </>
               :
               <>
@@ -131,16 +124,13 @@ function App() {
                 <img src={tree} alt='' className="tree" />
               </div>
               </>
-
                 }
-
 
             </div>
           </div>
         </div>
       </div>
-      </Router>
   );
 }
 
-export default App;
+export default Home;

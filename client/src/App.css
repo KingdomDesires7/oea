@@ -90,11 +90,9 @@
 }
 
 .dock {
-  cursor:crosshair;
   font-family: Orpheus-Pro;
-  /* color: #4be2e2;  */
-  /* Neon Cyan^ */
-  color: #0fefef; 
+  color: #0fefef;
   font-size: 21px;
-  /* Crisp's Cyan^ */
+  bottom: 3px;
+  position: relative;
 }

@@ -35,13 +35,43 @@
   align-items: center;
 }
 
-.treeContainer {
+.treeContainerC {
   position: absolute;
   color: white;
   display: flex;
   width: 585.3px;
-  top: 142px;
+  top: 150px;
   justify-content: center;
+}
+.treeContainerB {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 722px;
+  justify-content: center;
+}
+
+.nextTemplateContainer {
+  height: 28px;
+  width: 28px;
+  margin-left: 1.5px;
+  margin-right: 1.5px;
+}
+
+.nextTemplate {
+
+}
+
+.previousTemplateContainer {
+  height: 28px;
+  width: 28px;
+  margin-left: 1.5px;
+  margin-right: 1.5px;
+}
+
+.previousTemplate {
+  
 }
 
 .iPadContentSpace {
@@ -51,6 +81,13 @@
 }
 
 .consumerTemplate {
+  width: 585.3px;
+  height: 700px;
+  top: 98px;
+  position: absolute;
+}
+
+.businessTemplate {
   width: 585.3px;
   height: 700px;
   top: 98px;
@@ -82,7 +119,7 @@
 
 .dockContainer {
   position: relative;
-  height: 100%;
+  height: 100%; 
   display: flex;
   background: rgb(81, 81, 81);
   justify-content: center;
@@ -95,4 +132,74 @@
   font-size: 21px;
   bottom: 3px;
   position: relative;
+}
+
+.dockWithApps {
+  display: flex;
+  justify-content: center;
+  font-family: Orpheus-Pro;
+  color: #0fefef;
+  font-size: 21px;
+  bottom: 3px;
+  position: relative;
+}
+
+.balloonWrenchContainer {
+  height: 28px;
+  width: 28px;
+  margin-left: 1.5px;
+  margin-right: 1.5px;
+}
+
+.balloonWrench {
+  height: 28px;
+  width: 28px;
+}
+
+.earthContainer {
+  height: 28px;
+  width: 28px;
+  margin-left: 1.5px;
+  margin-right: 1.5px;
+}
+
+.earth {
+  height: 28px;
+  width: 28px;
+}
+
+.clockContainer {
+  height: 28px;
+  width: 28px;
+  margin-left: 1.5px;
+  margin-right: 1.5px;
+}
+
+.clock {
+  height: 28px;
+  width: 28px;
+}
+
+.eyeContainer {
+  height: 28px;
+  width: 28px;
+  margin-left: 1.5px;
+  margin-right: 1.5px;
+}
+
+.eye {
+  height: 28px;
+  width: 28px;
+}
+
+.rotateContainer {
+  height: 28px;
+  width: 28px;
+  margin-left: 1.5px;
+  margin-right: 1.5px;
+}
+
+.rotate {
+  height: 28px;
+  width: 28px;
 }

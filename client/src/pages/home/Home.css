@@ -15,13 +15,18 @@
   position: absolute;
 }
 
-.tree:hover, .tasks:hover, .mail:hover, .dashboard:hover, .stocks:hover, .alts:hover, .bonds:hover, .maintenance:hover, .runner:hover, .learn:hover, .books:hover, .solar:hover, .home:hover, .game:hover, .stream:hover, .home:hover, .notes:hover, .drive:hover, .reviews:hover, .news:hover, .train:hover, .cardio:hover, .diet:hover, .income:hover, .balances:hover, .cashflow:hover, .goods:hover, .services:hover, .design:hover, .engineering:hover, .doctor:hover, .lawyer:hover, .calendar:hover, .messages:hover, .circles:hover, .wall:hover, .groups:hover, .network:hover {
+.tree:hover, .health:hover, .lawyer:hover, .tasks:hover, .mail:hover, .dashboard:hover, .stocks:hover, .alts:hover, .bonds:hover, .maintenance:hover, .runner:hover, .learn:hover, .books:hover, .solar:hover, .home:hover, .game:hover, .stream:hover, .home:hover, .notes:hover, .drive:hover, .reviews:hover, .news:hover, .train:hover, .cardio:hover, .diet:hover, .income:hover, .balances:hover, .cashflow:hover, .goods:hover, .services:hover, .design:hover, .engineering:hover, .doctor:hover, .law:hover, .calendar:hover, .messages:hover, .circles:hover, .wall:hover, .groups:hover, .network:hover {
   transform: scale(1.12);
 }
-.doctor, .tasks, .mail, .dashboard, .stocks, .alts, .bonds, .maintenance, .runner, .learn, .books, .solar, .game, .stream, .home, .notes, .drive, .news, .reviews, .train, .cardio, .diet, .income, .balances, .cashflow, .goods, .design, .services, .engineering, .lawyer, .calendar, .messages, .wall, .circles, .groups, .network {
+.doctor, .health, .lawyer, .tasks, .mail, .dashboard, .stocks, .alts, .bonds, .maintenance, .runner, .learn, .books, .solar, .game, .stream, .home, .notes, .drive, .news, .reviews, .train, .cardio, .diet, .income, .balances, .cashflow, .goods, .design, .services, .engineering, .law, .calendar, .messages, .wall, .circles, .groups, .network {
   height: 21px;
   width: 21px;
   position: absolute;
+}
+
+.tree {
+  height: 28px;
+  width: 28px;
 }
 
 .iPadShellContainer {
@@ -54,12 +59,32 @@
   color: white;
   display: flex;
   width: 585.3px;
+  top: 474px;
+  left: 142px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.healthContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 527px;
+  left: 115px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.lawyerContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
   top: 214px;
   left: 144px;
   z-index: 2229992;
   justify-content: center;
 }
-.lawyerContainerC {
+.lawContainerC {
   position: absolute;
   color: white;
   display: flex;

@@ -1,0 +1,303 @@
+* {
+    font-family: Orpheus-Pro;
+  }
+  
+  .mainContainer {
+    height: 100vh;
+    width: 100vw;
+    /* background: #7b92a8; */
+    background: #93a7cc;
+  }
+  
+  .treeH {
+    height: 23px;
+    width: 23px;
+    position: absolute;
+    transform: scale(1.12);
+  }
+  
+  .treeH:hover {
+    transform: scale(1);
+  }
+  
+  .iPadShellContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .iPadShell {
+    height: calc(1059.84px * 0.77);
+    width: calc(812.16px * 0.77);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .treeContainerC {
+    position: absolute;
+    color: white;
+    display: flex;
+    width: 585.3px;
+    top: 150px;
+    justify-content: center;
+  }
+  .treeContainerB {
+    position: absolute;
+    color: white;
+    display: flex;
+    width: 585.3px;
+    top: 722px;
+    justify-content: center;
+  }
+  
+  .nextTemplateContainer {
+    height: 28px;
+    width: 28px;
+    margin-left: 1.5px;
+    margin-right: 1.5px;
+  }
+  
+  .nextTemplate {
+  
+  }
+  
+  .previousTemplateContainer {
+    height: 28px;
+    width: 28px;
+    margin-left: 1.5px;
+    margin-right: 1.5px;
+  }
+  
+  .previousTemplate {
+    
+  }
+  
+  .iPadContentSpace {
+    width: 585.3px;
+    height: 700px;
+    margin-top: 45px;
+  }
+  
+  .treeTemplate {
+    width: 585.3px;
+    height: 700px;
+    top: 98px;
+    position: absolute;
+  }
+  
+  .businessTemplate {
+    width: 585.3px;
+    height: 700px;
+    top: 98px;
+    position: absolute;
+  }
+  
+  .omniPanelContainer {
+    height: 9.2%;
+    position: absolute;
+    width: 91.1%;
+    top: 28px;
+    z-index: 12;
+  }
+  
+  .omniPanel {
+    height: 50%;
+    bottom: 1px;
+    position: relative;
+  }
+  
+  .omniSearch {
+  
+  }
+  
+  .omniSearch {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+  }
+  
+  .dockContainer {
+    position: relative;
+    height: 100%; 
+    display: flex;
+    background: rgb(81, 81, 81);
+    justify-content: center;
+    align-items: center;
+    z-index: 12;
+  }
+  
+  .dock {
+    font-family: Orpheus-Pro;
+    /* color: #0fefef; */
+    color: #5ab3a7;
+    font-size: 21px;
+    /* bottom: 3px; */
+    position: relative;
+    z-index: 12;
+  }
+  
+  .dockWithApps {
+    display: flex;
+    justify-content: center;
+    font-family: Orpheus-Pro;
+    /* color: #0fefef; */
+    color: #5ab3a7;
+    font-size: 21px;
+    /* bottom: 3px; */
+    position: relative;
+  }
+  
+  .balloonWrenchContainer {
+    height: 28px;
+    width: 28px;
+    margin-left: 1.5px;
+    margin-right: 1.5px;
+  }
+  
+  .balloonWrench {
+    height: 28px;
+    width: 28px;
+  }
+  
+  .earthContainer {
+    height: 28px;
+    width: 28px;
+    margin-left: 1.5px;
+    margin-right: 1.5px;
+  }
+  
+  .earth {
+    height: 28px;
+    width: 28px;
+  }
+  
+  .clockContainer {
+    height: 28px;
+    width: 28px;
+    margin-left: 1.5px;
+    margin-right: 1.5px;
+  }
+  
+  .clock {
+    height: 28px;
+    width: 28px;
+  }
+  
+  .eyeContainer {
+    height: 28px;
+    width: 28px;
+    margin-left: 1.5px;
+    margin-right: 1.5px;
+  }
+  
+  .eye {
+    height: 28px;
+    width: 28px;
+  }
+  
+  .rotateContainer {
+    height: 28px;
+    width: 28px;
+    margin-left: 1.5px;
+    margin-right: 1.5px;
+  }
+  
+  .rotate {
+    height: 28px;
+    width: 28px;
+  }
+
+  .treeTopics {
+    color: #0fefef;
+    color: #5ab3a7;
+    z-index: 99;
+  }
+
+  .reference {
+    position: absolute;
+    top: 176px;
+    left: 282px;
+  }
+
+  .arts {
+    position: absolute;
+    left: 91px;
+    top: 306px;
+  }
+
+  .philosophy {
+    position: absolute;
+    left: 486px;
+    top: 306px;
+  }
+
+  .allElseNonSciences {
+    position: absolute;
+    top: 695px;
+    left: 288px;
+  }
+
+  .allElseSciences {
+    position: absolute;
+    top: 565px;
+    left: 287px;
+  }
+
+  .biology {
+    position: absolute;
+    left: 183px;
+    top: 370px;
+  }
+
+  .mathematics {
+    position: absolute;
+    left: 273px;
+    top: 306px;
+  }
+
+  .physics {
+    position: absolute;
+    left: 393px;
+    top: 372px;
+  }
+
+  .chemistry {
+    position: absolute;
+    left: 175px;
+    top: 502px;
+  }
+
+  .socialSciences {
+    position: absolute;
+    left: 366px;
+    top: 501px;
+  }
+
+  .languageArts {
+    position: absolute;
+    left: 59px;
+    top: 565px;
+  }
+  .history {
+    position: absolute;
+    top: 565px;
+    left: 497px;
+  }
+
+  .metadata {
+    position: absolute;
+    top: 436px;
+    left: 284px;
+  }
+
+  .treeVid {
+    height: 782px;
+    width: 591px;
+    bottom: 20px;
+    position: absolute;
+    right: 20px;
+  }

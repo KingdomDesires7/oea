@@ -5,7 +5,8 @@
 .mainContainer {
   height: 100vh;
   width: 100vw;
-  background: #7b92a8;
+    /* background: #7b92a8; */
+    background: #93a7cc;
 }
 
 .tree {
@@ -14,8 +15,13 @@
   position: absolute;
 }
 
-.tree:hover {
-  transform: scale(1.2);
+.tree:hover, .tasks:hover, .mail:hover, .dashboard:hover, .stocks:hover, .alts:hover, .bonds:hover, .maintenance:hover, .runner:hover, .learn:hover, .books:hover, .solar:hover, .home:hover, .game:hover, .stream:hover, .home:hover, .notes:hover, .drive:hover, .reviews:hover, .news:hover, .train:hover, .cardio:hover, .diet:hover, .income:hover, .balances:hover, .cashflow:hover, .goods:hover, .services:hover, .design:hover, .engineering:hover, .doctor:hover, .lawyer:hover, .calendar:hover, .messages:hover, .circles:hover, .wall:hover, .groups:hover, .network:hover {
+  transform: scale(1.12);
+}
+.doctor, .tasks, .mail, .dashboard, .stocks, .alts, .bonds, .maintenance, .runner, .learn, .books, .solar, .game, .stream, .home, .notes, .drive, .news, .reviews, .train, .cardio, .diet, .income, .balances, .cashflow, .goods, .design, .services, .engineering, .lawyer, .calendar, .messages, .wall, .circles, .groups, .network {
+  height: 21px;
+  width: 21px;
+  position: absolute;
 }
 
 .iPadShellContainer {
@@ -41,6 +47,383 @@
   display: flex;
   width: 585.3px;
   top: 150px;
+  justify-content: center;
+}
+.doctorContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 214px;
+  left: 144px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.lawyerContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 267px;
+  left: 114px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.streamContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 292px;
+  left: 256px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.homeContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 267px;
+  left: 114px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.reviewsContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 563px;
+  left: 21px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.solarContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 662px;
+  left: 21px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.booksContainerC {
+    position: absolute;
+    color: white;
+    display: flex;
+    width: 585.3px;
+    top: 321px;
+    right: 205px;
+    z-index: 2229992;
+    justify-content: center;
+}
+.learnContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 287px;
+  right: 255px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.runnerContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 265px;
+  right: 115px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.maintenanceContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 213px;
+  right: 137px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.newsContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 368px;
+  left: 130px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.notesContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 438px;
+  left: 209px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.gameContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 321px;
+  left: 209px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.homeContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 721px;
+  left: 20px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.driveContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 436px;
+  left: 262px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.dashboardContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 371px;
+  right: 125px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.stocksContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 572px;
+  left: 261px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.altsContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 565px;
+  left: 198px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.bondsContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 495.29999999999995px;
+  top: 530px;
+  left: 259px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.calendarContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 305px;
+  right: 46px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.messagesContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 435px;
+  right: 206px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.tasksContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 306px;
+  left: 48px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.mailContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 434px;
+  right: 259px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.wallContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 472px;
+  right: 138px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.dietContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 530px;
+  right: 215px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.trainContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 577px;
+  right: 255px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.cardioContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 566px;
+  right: 197px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.incomeContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 417px;
+  right: 46px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.balancesContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 416px;
+  left: 45px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.cashflowContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 468px;
+  right: 19px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.omnibox {
+  width: 500px;
+  height:25px;
+  position: absolute;
+  top: 5px;
+  background-color:rgb(61, 59, 45);
+}
+.circlesContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 524px;
+  right: 115px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.networkContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 472px;
+  left: 138px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.groupsContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 524px;
+  left: 115px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.goodsContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 654px;
+  right: 139px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.servicesContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 604px;
+  right: 115px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.designContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 604px;
+  left: 117px;
+  z-index: 2229992;
+  justify-content: center;
+}
+.engineeringContainerC {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 585.3px;
+  top: 655px;
+  left: 138px;
+  z-index: 2229992;
   justify-content: center;
 }
 .treeContainerB {
@@ -99,6 +482,7 @@
   position: absolute;
   width: 91.1%;
   top: 28px;
+  z-index: 12;
 }
 
 .omniPanel {
@@ -131,7 +515,7 @@
   /* color: #0fefef; */
   color: #5ab3a7;
   font-size: 21px;
-  bottom: 3px;
+  /* bottom: 3px; */
   position: relative;
 }
 
@@ -142,7 +526,7 @@
   /* color: #0fefef; */
   color: #5ab3a7;
   font-size: 21px;
-  bottom: 3px;
+  /* bottom: 3px; */
   position: relative;
 }
 

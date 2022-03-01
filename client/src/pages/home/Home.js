@@ -1,13 +1,27 @@
 import React, {useState} from 'react';
 // import Router from './Router';
 // import Routes from './routes';
-import DApps from './DApps.js';
-import GApps from './GApps.js';
+import omniboxPanel from '../../components/OmniboxPanel/omniboxPanel';
+import DApps from './DApps';
 import './Home.css';
 import iPadProFrame from '../../assets/images/iPadProFrame.png';
 import { Link } from 'react-router-dom'; 
-import doctor from '../../assets/images/icons/doctor.png';
+import Consumer from '../../assets/images/Consumer.png';
+import Business from '../../assets/images/Business.png';
+import SearchBar from '../../assets/images/SearchBar.png';
 import tree from '../../assets/images/icons/tree.png';
+import nextTemplate from '../../assets/images/uDock/downArrow.png';
+import previousTemplate from '../../assets/images/uDock/upArrow.png';
+import balloonWrench from '../../assets/images/uDock/balloon-wrench.png';
+// import balloonWrenchFilled from '../../assets/images/uDock/balloon-wrench-filled.png';
+import earth from '../../assets/images/uDock/earth.png';
+// import earthFilled from '../../assets/images/uDock/earth-filled.png';
+import clock from '../../assets/images/uDock/clock.png';
+// import clockFilled from '../../assets/images/uDock/clock-filled.png';
+import eye from '../../assets/images/uDock/eye.png';
+// import eyeFilled from '../../assets/images/uDock/eye-filled.png';
+import rotate from '../../assets/images/uDock/rotate.png';
+import doctor from '../../assets/images/icons/doctor.png';
 import doctorFilled from '../../assets/images/icons/doctor-filled.png';
 import law from '../../assets/images/icons/law.png';
 import lawFilled from '../../assets/images/icons/law-filled.png';
@@ -83,28 +97,12 @@ import tasks from '../../assets/images/icons/tasks.png';
 import tasksFilled from '../../assets/images/icons/tasks-filled.png';
 import mail from '../../assets/images/icons/mail.png';
 import mailFilled from '../../assets/images/icons/mail-filled.png';
-import Consumer from '../../assets/images/Consumer.png';
-
-import Business from '../../assets/images/Business.png';
-import SearchBar from '../../assets/images/SearchBar.png';
-
-import nextTemplate from '../../assets/images/uDock/next-template.svg';
-import previousTemplate from '../../assets/images/uDock/previous-template.svg';
-import balloonWrench from '../../assets/images/uDock/balloon-wrench.png';
-// import balloonWrenchFilled from '../../assets/images/uDock/balloon-wrench-filled.png';
-import earth from '../../assets/images/uDock/earth.png';
-// import earthFilled from '../../assets/images/uDock/earth-filled.png';
-import clock from '../../assets/images/uDock/clock.png';
-// import clockFilled from '../../assets/images/uDock/clock-filled.png';
-import eye from '../../assets/images/uDock/eye.png';
-// import eyeFilled from '../../assets/images/uDock/eye-filled.png';
-import rotate from '../../assets/images/uDock/rotate.png';
 
 function Home() {
   const [omniLabel, setOmniLabel] = useState('Omnibox Extension App')
   const [dockVisible, setDockVisible] = useState(false)
   const [consumerVisible, setConsumerVisible] = useState(true)
-  const [template, setTemplate] = useState('Default')
+  const [template, setTemplate] = useState('GApps')
   
   const mouseOverDock = () => {
     if (dockVisible) {
@@ -116,22 +114,6 @@ function Home() {
     if (dockVisible) {
       setDockVisible(false)
     } else { setDockVisible(true) }
-  }
-
-      const treeClicked = () => {
-    }
-
-
-  const rotateGrid = () => {
-    setConsumerVisible(!consumerVisible)
-  }
-
-  const mouseLeaveIcon = () => {
-    setOmniLabel('Omnibox Extension App')
-}
-
-  const previousTemplateClicked = () => {
-    setTemplate('asda')
   }
 
   const mouseOverIcon = (Icon) => {
@@ -254,6 +236,31 @@ function Home() {
     }
   }
 
+  const mouseLeaveIcon = () => {
+      setOmniLabel('Omnibox Extension App')
+  }
+
+  const rotateGrid = () => {
+    setConsumerVisible(!consumerVisible)
+  }
+
+  const treeClicked = () => {
+  }
+
+  const previousTemplateClicked = () => {
+    if (template === 'DApps') {} else {
+      alert('asda')
+      setTemplate('DApps')
+      const nextTempalateDiv = document.querySelector('nextTemplateContainer')
+      nextTempalateDiv.style.display = 'none';
+    }
+  }
+
+  const nextTemplateClicked = () => {
+    if (template === 'GApps') {} else {
+      setTemplate('GApps')
+    }
+  }
 
   return (
     <div className="mainContainer">
@@ -271,8 +278,8 @@ function Home() {
                 <div onMouseEnter={() => mouseOverDock()} onMouseLeave={()=>mouseLeaveDock()} className="dockContainer">
                   
                 <div className="dockWithApps">
-                  <div className="previousTemplateContainer">
-                    <img onClick={() => previousTemplateClicked()} src={previousTemplate} className="previousTemplate" alt=''/>
+                  <div onClick={()=>previousTemplateClicked()} className="previousTemplateContainer">
+                    <img src={previousTemplate} className="previousTemplate" alt=''/>
                   </div>
 
                   <div className="balloonWrenchContainer">
@@ -296,7 +303,7 @@ function Home() {
                   </div>
 
                   <div className="nextTemplateContainer">
-                    <img src={nextTemplate} className="nextTemplate" alt=''/>
+                    <img onClick={()=>nextTemplateClicked()} src={nextTemplate} className="nextTemplate" alt=''/>
                   </div>
                 </div>
               </div>
@@ -312,7 +319,7 @@ function Home() {
             </div>
             <div className="iPadContentSpace">
 
-                { consumerVisible && template === 'Default' ? 
+                { consumerVisible && template === 'GApps' ? 
                 <>
               {/* {GApps()} */}
               {/* {<GApps mouseoverIcon={mouseOverIcon} treeClicked={treeClicked} omnilabel={omniLabel} setOmnilabel={setOmniLabel}/>} */}
@@ -328,41 +335,36 @@ function Home() {
                       <img src={doctor} alt='' className="doctor" />
                     </div> 
                   </Link>
+
                   <Link to="tree">
                     <div onClick={()=>treeClicked()} onMouseEnter={() => mouseOverIcon('law')} onMouseLeave={() => mouseLeaveIcon()} className="lawContainerC">
                       <img src={law} alt='' className="law" />
                     </div> 
                   </Link>
+
                   <Link to="tree">
                     <div onClick={()=>treeClicked()} onMouseEnter={() => mouseOverIcon('calendar')} onMouseLeave={() => mouseLeaveIcon()} className="calendarContainerC">
                       <img src={calendar} alt='' className="calendar" />
                     </div> 
                   </Link>
+
                   <Link to="tree">
                     <div onClick={()=>treeClicked()} onMouseEnter={() => mouseOverIcon('messages')} onMouseLeave={() => mouseLeaveIcon()} className="messagesContainerC">
                       <img src={messages} alt='' className="messages" />
                     </div> 
                   </Link>
+
                   <Link to="tree">
                     <div onClick={()=>treeClicked()} onMouseEnter={() => mouseOverIcon('wall')} onMouseLeave={() => mouseLeaveIcon()} className="wallContainerC">
                       <img src={wall} alt='' className="wall" />
                     </div> 
                   </Link>
+
                   <Link to="tree">
                     <div onClick={()=>treeClicked()} onMouseEnter={() => mouseOverIcon('circles')} onMouseLeave={() => mouseLeaveIcon()} className="circlesContainerC">
                       <img src={circles} alt='' className="circles" />
                     </div> 
                   </Link>
-                  {/* <Link to="tree">
-                    <div onClick={()=>treeClicked()} onMouseEnter={() => mouseOverIcon('network')} onMouseLeave={() => mouseLeaveIcon()} className="networkContainerC">
-                      <img src={network} alt='' className="network" />
-                    </div> 
-                  </Link> */}
-                  {/* <Link to="tree">
-                    <div onClick={()=>treeClicked()} onMouseEnter={() => mouseOverIcon('groups')} onMouseLeave={() => mouseLeaveIcon()} className="groupsContainerC">
-                      <img src={groups} alt='' className="groups" />
-                    </div> 
-                  </Link> */}
 
                   <Link to="tree">
                     <div onClick={()=>treeClicked()} onMouseEnter={() => mouseOverIcon('goods')} onMouseLeave={() => mouseLeaveIcon()} className="goodsContainerC">

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 // import Router from './Router';
 // import Routes from './routes';
+import DApps from './DApps.js';
 import './Home.css';
 import iPadProFrame from '../../assets/images/iPadProFrame.png';
 import { Link } from 'react-router-dom'; 
@@ -100,6 +101,7 @@ function Home() {
   const [omniLabel, setOmniLabel] = useState('Omnibox Extension App')
   const [dockVisible, setDockVisible] = useState(false)
   const [consumerVisible, setConsumerVisible] = useState(true)
+  const [template, setTemplate] = useState('Default')
   
   const mouseOverDock = () => {
     if (dockVisible) {
@@ -244,6 +246,10 @@ function Home() {
   const treeClicked = () => {
   }
 
+  const previousTemplateClicked = () => {
+    setTemplate('asda')
+  }
+
   return (
     <div className="mainContainer">
         <div className="iPadShellContainer">
@@ -261,7 +267,7 @@ function Home() {
                   
                 <div className="dockWithApps">
                   <div className="previousTemplateContainer">
-                    <img src={previousTemplate} className="previousTemplate" alt=''/>
+                    <img onClick={() => previousTemplateClicked()} src={previousTemplate} className="previousTemplate" alt=''/>
                   </div>
 
                   <div className="balloonWrenchContainer">
@@ -301,7 +307,7 @@ function Home() {
             </div>
             <div className="iPadContentSpace">
 
-                { consumerVisible ?
+                { consumerVisible && template === 'Default' ? 
                 <>
               <img src={Consumer} className="consumerTemplate" alt="" />
                 <Link to="tree">
@@ -529,28 +535,10 @@ function Home() {
                       <img src={mail} alt='' className="mail" />
                     </div> 
                   </Link>
-
               </>
-              :
+              : 
               <>
-              <img src={Business} className="businessTemplate" alt="" />
-              <div onMouseEnter={() => mouseOverIcon('tree')} onMouseLeave={() => mouseLeaveIcon()} className="treeContainerB">
-                  <Link to="/tree">
-                    <div onClick={()=>treeClicked()} onMouseEnter={() => mouseOverIcon('tree')} onMouseLeave={() => mouseLeaveIcon()} className="treeContainerB">
-                        <button src={tree} alt='' className="tree" ></button>
-                    </div>
-                  </Link>
-                  <Link to="/tree">
-                    <div onClick={()=>treeClicked()} onMouseEnter={() => mouseOverIcon('doctor')} onMouseLeave={() => mouseLeaveIcon()} className="treeContainerB">
-                        <button src={doctor} alt='' className="doctor" ></button>
-                    </div>
-                  </Link>
-                  <Link to="/tree">
-                    <div onClick={()=>treeClicked()} onMouseEnter={() => mouseOverIcon('law')} onMouseLeave={() => mouseLeaveIcon()} className="lawContainerB">
-                        <button src={doctor} alt='' className="law" ></button>
-                    </div>
-                  </Link>
-                </div>
+              {DApps()}
               </>
                 }
 

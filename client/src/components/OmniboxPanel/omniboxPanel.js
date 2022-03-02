@@ -15,6 +15,7 @@ export default function omniboxPanel() {
         <div className="omniboxLeftIconContainer">
             <img></img>
             </div>
+            
     </div>
   )
 }

@@ -217,7 +217,7 @@ function Home() {
       setOmniLabel('uAlts')
     }
     if (Icon === 'stocks') {
-      setOmniLabel('ustocks')
+      setOmniLabel('uStocks')
     }
     if (Icon === 'bonds') {
       setOmniLabel('uBonds')
@@ -249,7 +249,6 @@ function Home() {
 
   const previousTemplateClicked = () => {
     if (template === 'DApps') {} else {
-      alert('asda')
       setTemplate('DApps')
       const nextTempalateDiv = document.querySelector('nextTemplateContainer')
       nextTempalateDiv.style.display = 'none';
@@ -270,10 +269,11 @@ function Home() {
           <div className="iPadShell">
             <div  className="omniPanelContainer">
               <div  className="omniPanel">
-                <div className="omniSearch">
+                {/* <div className="omniSearch"> */}
+                {omniboxPanel()}
                   {/* <input className="omnibox"></input> */}
-                <img src={SearchBar} className="omniSearch" alt="" />
-                </div>
+                {/* <img src={SearchBar} className="omniSearch" alt="" /> */}
+                {/* </div> */}
                 {dockVisible ? 
                 <div onMouseEnter={() => mouseOverDock()} onMouseLeave={()=>mouseLeaveDock()} className="dockContainer">
                   

@@ -8,15 +8,20 @@ import search from '../../assets/images/OmniPanel/search.png';
 export default function OmniboxPanel({ dockIconVisible }) {
   const [ localDockItem, setLocalDockItem ] = useState(dockIconVisible)
 
-  const dockIconClicked = () => {
-      // setLocalDockItem('notHome');
-      if (dockIconVisible !== 'home') {
+  // const dockIconClicked = () => {
+  //     // setLocalDockItem('notHome');
+  //     if (dockIconVisible !== 'home') {
 
-      }
-  }
+  //     }
+  // }
 
   const hamburgerClicked = () => {
     console.log(`you have clicke the burger`)
+  }
+
+  const dockIconClicked = () => {
+    const dockIcon = document.querySelector('.dockIcon')
+    dockIcon.src = dockFilled
   }
 
   useEffect(() => {
@@ -30,7 +35,7 @@ export default function OmniboxPanel({ dockIconVisible }) {
            {
            localDockItem === 'home' || "tree" &&  localDockItem !== 'health' ? 
            <img className="searchIcon" alt='' src={search} /> : 
-                <img alt='' className="dockIcon" src={dock} />
+                <img onClick={() => dockIconClicked()} alt='' className="dockIcon" src={dock} />
                      }
             </div>
         <div className="omniboxSearchContainer">

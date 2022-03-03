@@ -4,6 +4,7 @@ import React, {useState, useEffect} from 'react';
 import './Tree.css';
 import iPadProFrame from '../../assets/images/iPadProFrame.png';
 // import { Link } from 'react-router-dom'; 
+import OmniboxPanel from '../../components/OmniboxPanel/OmniboxPanel';
 import SearchBar from '../../assets/images/SearchBar.png';
 import Tree from '../../assets/images/Tree.png';
 import TreeManicTemplate from '../../assets/videos/Tree.mp4';
@@ -99,9 +100,8 @@ function Home() {
           <div className="iPadShell">
             <div  className="omniPanelContainer">
               <div  className="omniPanel">
-                <div className="omniSearch">
-                <img src={SearchBar} className="omniSearch" alt="" />
-                </div>
+              <OmniboxPanel dockIconVisible='tree' />
+
                 {dockVisible ? 
                 <div onMouseEnter={() => mouseOverDock()} onMouseLeave={()=>mouseLeaveDock()} className="dockContainer">
                   

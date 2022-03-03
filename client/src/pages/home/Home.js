@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 // import Router from './Router';
 // import Routes from './routes';
-import OmniboxPanel from '../../components/OmniboxPanel/omniboxPanel';
+import OmniboxPanel from '../../components/OmniboxPanel/OmniboxPanel';
 import DApps from './DApps';
 import './Home.css';
 import iPadProFrame from '../../assets/images/iPadProFrame.png';
@@ -269,11 +269,7 @@ function Home() {
           <div className="iPadShell">
             <div  className="omniPanelContainer">
               <div  className="omniPanel">
-                <OmniboxPanel dockIconVisible={false} />
-                {/* <div className="omniSearch">
-
-                <img src={SearchBar} className="omniSearch" alt="" />
-                </div> */}
+                <OmniboxPanel dockIconVisible='home' />
                 {dockVisible ? 
                 <div onMouseEnter={() => mouseOverDock()} onMouseLeave={()=>mouseLeaveDock()} className="dockContainer">
                   
@@ -330,7 +326,7 @@ function Home() {
                     <img src={tree} alt='' className="tree" />
                   </div> 
                   </Link>
-                  <Link to="tree">
+                  <Link to="health">
                     <div onClick={()=>treeClicked()} onMouseEnter={() => mouseOverIcon('doctor')} onMouseLeave={() => mouseLeaveIcon()} className="doctorContainerC">
                       <img src={doctor} alt='' className="doctor" />
                     </div> 
@@ -450,7 +446,7 @@ function Home() {
                     </div> 
                   </Link>
 
-                  <Link to="tree">
+                  <Link to="health">
                     <div onClick={()=>treeClicked()} onMouseEnter={() => mouseOverIcon('health')} onMouseLeave={() => mouseLeaveIcon()} className="healthContainerC">
                       <img src={health} alt='' className="health" />
                     </div> 

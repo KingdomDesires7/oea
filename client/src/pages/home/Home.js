@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
 // import Router from './Router';
 // import Routes from './routes';
-import omniboxPanel from '../../components/OmniboxPanel/omniboxPanel';
+import OmniboxPanel from '../../components/OmniboxPanel/omniboxPanel';
 import DApps from './DApps';
 import './Home.css';
 import iPadProFrame from '../../assets/images/iPadProFrame.png';
 import { Link } from 'react-router-dom'; 
 import Consumer from '../../assets/images/Consumer.png';
-import Business from '../../assets/images/Business.png';
-import SearchBar from '../../assets/images/SearchBar.png';
+// import Business from '../../assets/images/Business.png';
+// import SearchBar from '../../assets/images/SearchBar.png';
 import tree from '../../assets/images/icons/tree.png';
 import nextTemplate from '../../assets/images/uDock/downArrow.png';
 import previousTemplate from '../../assets/images/uDock/upArrow.png';
@@ -22,81 +22,81 @@ import eye from '../../assets/images/uDock/eye.png';
 // import eyeFilled from '../../assets/images/uDock/eye-filled.png';
 import rotate from '../../assets/images/uDock/rotate.png';
 import doctor from '../../assets/images/icons/doctor.png';
-import doctorFilled from '../../assets/images/icons/doctor-filled.png';
+// import doctorFilled from '../../assets/images/icons/doctor-filled.png';
 import law from '../../assets/images/icons/law.png';
-import lawFilled from '../../assets/images/icons/law-filled.png';
+// import lawFilled from '../../assets/images/icons/law-filled.png';
 import lawyer from '../../assets/images/icons/lawyer.png';
-import lawyerFilled from '../../assets/images/icons/lawyer-filled.png';
+// import lawyerFilled from '../../assets/images/icons/lawyer-filled.png';
 import calendar from '../../assets/images/icons/calendar.png';
-import calendarFilled from '../../assets/images/icons/calendar-filled.png';
+// import calendarFilled from '../../assets/images/icons/calendar-filled.png';
 import messages from '../../assets/images/icons/messages.png';
-import messagesFilled from '../../assets/images/icons/messages-filled.png';
+// import messagesFilled from '../../assets/images/icons/messages-filled.png';
 import wall from '../../assets/images/icons/wall.png';
-import wallFilled from '../../assets/images/icons/wall-filled.png';
+// import wallFilled from '../../assets/images/icons/wall-filled.png';
 import circles from '../../assets/images/icons/circles.png';
-import circlesFilled from '../../assets/images/icons/circles-filled.png';
-import network from '../../assets/images/icons/network.png';
-import networkFilled from '../../assets/images/icons/network-filled.png';
-import groups from '../../assets/images/icons/groups.png';
-import groupsFilled from '../../assets/images/icons/groups-filled.png';
+// import circlesFilled from '../../assets/images/icons/circles-filled.png';
+// import network from '../../assets/images/icons/network.png';
+// import networkFilled from '../../assets/images/icons/network-filled.png';
+// import groups from '../../assets/images/icons/groups.png';
+// import groupsFilled from '../../assets/images/icons/groups-filled.png';
 import goods from '../../assets/images/icons/goods.png';
-import goodsFilled from '../../assets/images/icons/goods-filled.png';
+// import goodsFilled from '../../assets/images/icons/goods-filled.png';
 import services from '../../assets/images/icons/services.png';
-import servicesFilled from '../../assets/images/icons/services-filled.png';
+// import servicesFilled from '../../assets/images/icons/services-filled.png';
 import design from '../../assets/images/icons/design.png';
-import designFilled from '../../assets/images/icons/design-filled.png';
+// import designFilled from '../../assets/images/icons/design-filled.png';
 import engineering from '../../assets/images/icons/engineering.png';
-import engineeringFilled from '../../assets/images/icons/engineering-filled.png';
+// import engineeringFilled from '../../assets/images/icons/engineering-filled.png';
 import income from '../../assets/images/icons/income.png';
-import incomeFilled from '../../assets/images/icons/income-filled.png';
+// import incomeFilled from '../../assets/images/icons/income-filled.png';
 import balances from '../../assets/images/icons/balances.png';
-import balancesFilled from '../../assets/images/icons/balances-filled.png';
+// import balancesFilled from '../../assets/images/icons/balances-filled.png';
 import cashflow from '../../assets/images/icons/cashflow.png';
-import cashflowFilled from '../../assets/images/icons/cashflow-filled.png';
+// import cashflowFilled from '../../assets/images/icons/cashflow-filled.png';
 import diet from '../../assets/images/icons/diet.png';
-import dietFilled from '../../assets/images/icons/diet-filled.png';
+// import dietFilled from '../../assets/images/icons/diet-filled.png';
 import health from '../../assets/images/icons/health.png';
-import healthFilled from '../../assets/images/icons/health-filled.png';
+// import healthFilled from '../../assets/images/icons/health-filled.png';
 import train from '../../assets/images/icons/train.png';
-import trainFilled from '../../assets/images/icons/train-filled.png';
+// import trainFilled from '../../assets/images/icons/train-filled.png';
 import cardio from '../../assets/images/icons/cardio.png';
-import cardioFilled from '../../assets/images/icons/cardio-filled.png';
+// import cardioFilled from '../../assets/images/icons/cardio-filled.png';
 import news from '../../assets/images/icons/news.png';
-import newsFilled from '../../assets/images/icons/news-filled.png';
+// import newsFilled from '../../assets/images/icons/news-filled.png';
 import reviews from '../../assets/images/icons/reviews.png';
-import reviewsFilled from '../../assets/images/icons/reviews-filled.png';
+// import reviewsFilled from '../../assets/images/icons/reviews-filled.png';
 import notes from '../../assets/images/icons/notes.png';
-import notesFilled from '../../assets/images/icons/notes-filled.png';
+// import notesFilled from '../../assets/images/icons/notes-filled.png';
 import drive from '../../assets/images/icons/drive.png';
-import driveFilled from '../../assets/images/icons/drive-filled.png';
+// import driveFilled from '../../assets/images/icons/drive-filled.png';
 import stream from '../../assets/images/icons/stream.png';
-import streamFilled from '../../assets/images/icons/stream-filled.png';
+// import streamFilled from '../../assets/images/icons/stream-filled.png';
 import home from '../../assets/images/icons/home.png';
-import homeFilled from '../../assets/images/icons/home-filled.png';
+// import homeFilled from '../../assets/images/icons/home-filled.png';
 import game from '../../assets/images/icons/game.png';
-import gameFilled from '../../assets/images/icons/game-filled.png';
+// import gameFilled from '../../assets/images/icons/game-filled.png';
 import learn from '../../assets/images/icons/learn.png';
-import learnFilled from '../../assets/images/icons/learn-filled.png';
+// import learnFilled from '../../assets/images/icons/learn-filled.png';
 import books from '../../assets/images/icons/books.png';
-import booksFilled from '../../assets/images/icons/books-filled.png';
+// import booksFilled from '../../assets/images/icons/books-filled.png';
 import solar from '../../assets/images/icons/solar.png';
-import solarFilled from '../../assets/images/icons/solar-filled.png';
+// import solarFilled from '../../assets/images/icons/solar-filled.png';
 import maintenance from '../../assets/images/icons/maintenance.png';
-import maintenanceFilled from '../../assets/images/icons/maintenance-filled.png';
+// import maintenanceFilled from '../../assets/images/icons/maintenance-filled.png';
 import runner from '../../assets/images/icons/runner.png';
-import runnerFilled from '../../assets/images/icons/runner-filled.png';
+// import runnerFilled from '../../assets/images/icons/runner-filled.png';
 import stocks from '../../assets/images/icons/stocks.png';
-import stocksFilled from '../../assets/images/icons/stocks-filled.png';
+// import stocksFilled from '../../assets/images/icons/stocks-filled.png';
 import alts from '../../assets/images/icons/alts.png';
-import altsFilled from '../../assets/images/icons/alts-filled.png';
+// import altsFilled from '../../assets/images/icons/alts-filled.png';
 import bonds from '../../assets/images/icons/bonds.png';
-import bondsFilled from '../../assets/images/icons/bonds-filled.png';
+// import bondsFilled from '../../assets/images/icons/bonds-filled.png';
 import dashboard from '../../assets/images/icons/dashboard.png';
-import dashboardFilled from '../../assets/images/icons/dashboard-filled.png';
+// import dashboardFilled from '../../assets/images/icons/dashboard-filled.png';
 import tasks from '../../assets/images/icons/tasks.png';
-import tasksFilled from '../../assets/images/icons/tasks-filled.png';
+// import tasksFilled from '../../assets/images/icons/tasks-filled.png';
 import mail from '../../assets/images/icons/mail.png';
-import mailFilled from '../../assets/images/icons/mail-filled.png';
+// import mailFilled from '../../assets/images/icons/mail-filled.png';
 
 function Home() {
   const [omniLabel, setOmniLabel] = useState('Omnibox Extension App')
@@ -217,7 +217,7 @@ function Home() {
       setOmniLabel('uAlts')
     }
     if (Icon === 'stocks') {
-      setOmniLabel('uStocks')
+      setOmniLabel('ustocks')
     }
     if (Icon === 'bonds') {
       setOmniLabel('uBonds')
@@ -269,11 +269,11 @@ function Home() {
           <div className="iPadShell">
             <div  className="omniPanelContainer">
               <div  className="omniPanel">
-                {/* <div className="omniSearch"> */}
-                {omniboxPanel()}
-                  {/* <input className="omnibox"></input> */}
-                {/* <img src={SearchBar} className="omniSearch" alt="" /> */}
-                {/* </div> */}
+                <OmniboxPanel dockIconVisible={false} />
+                {/* <div className="omniSearch">
+
+                <img src={SearchBar} className="omniSearch" alt="" />
+                </div> */}
                 {dockVisible ? 
                 <div onMouseEnter={() => mouseOverDock()} onMouseLeave={()=>mouseLeaveDock()} className="dockContainer">
                   

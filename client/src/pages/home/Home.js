@@ -121,15 +121,18 @@ function Home() {
   }, [])
   
   const mouseOverDock = () => {
+    if (appSelected === "HOME") {
     if (dockVisible) {
       setDockVisible(false)
     } else { setDockVisible(true) }
   }
+  }
 
   const mouseLeaveDock = () => {
+    if (appSelected === "HOME") {
     if (dockVisible) {
       setDockVisible(false)
-    } else { setDockVisible(true) }
+    } else { setDockVisible(true) }}
   }
 
   const mouseOverIcon = (Icon) => {

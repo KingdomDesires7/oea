@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './OmniboxPanel.css'
 import dock from '../../assets/images/OmniPanel/dock.png';
 import dockFilled from '../../assets/images/OmniPanel/dockFilled.png';
 import search from '../../assets/images/OmniPanel/search.png';
 //import hamburger from '../../assets/images/OmniPanel/hamburger.png';
+import Typed from "typed.js";
 
 export default function OmniboxPanel({ dockIconVisible, toggleDock }) {
   const [ localDockItem, setLocalDockItem ] = useState(dockIconVisible)
   const [ dockSelected, setDockSelected ] = useState(false)
-
+  const el = useRef(null);
 
   const hamburgerClicked = () => {
     console.log(`you have clicke the burger`)
@@ -32,6 +33,17 @@ export default function OmniboxPanel({ dockIconVisible, toggleDock }) {
 
   useEffect(() => {
       // alert(localDockItem)
+      if (dockIconVisible === 'health') {
+
+      const typed = new Typed(el.current, {
+        strings: ["Welcome to the Health App"], // Strings to display
+        // Speed settings, try diffrent values untill you get good results
+        startDelay: 300,
+        typeSpeed: 100,
+        backSpeed: 100,
+        backDelay: 100
+      });
+    }
     }, [localDockItem]);
 
 
@@ -45,7 +57,7 @@ export default function OmniboxPanel({ dockIconVisible, toggleDock }) {
                      }
             </div>
         <div className="omniboxSearchContainer">
-            <input className="omniboxSearchInput"></input>
+            <input ref={el} className="omniboxSearchInput"></input>
             <div onMouseOver={() => hamburgerClicked()} className="hamburgerIcon"></div>
         </div>  
     </div>

@@ -3,10 +3,10 @@ import OmniboxPanel from '../../components/OmniboxPanel/OmniboxPanel';
 import './Health.css';
 import iPadProFrame from '../../assets/images/iPadProFrame.png';
 import { Link } from 'react-router-dom'; 
+import balloonWrench from '../../assets/images/uDock/balloon-wrench.png';
 import HealthDock from '../../components/Docks/HealthDock';
 import nextTemplate from '../../assets/images/uDock/downArrow.png';
 import previousTemplate from '../../assets/images/uDock/upArrow.png';
-import balloonWrench from '../../assets/images/uDock/balloon-wrench.png';
 // import balloonWrenchFilled from '../../assets/images/uDock/balloon-wrench-filled.png';
 import earth from '../../assets/images/uDock/earth.png';
 // import earthFilled from '../../assets/images/uDock/earth-filled.png';
@@ -15,7 +15,8 @@ import clock from '../../assets/images/uDock/clock.png';
 import eye from '../../assets/images/uDock/eye.png';
 // import eyeFilled from '../../assets/images/uDock/eye-filled.png';
 import rotate from '../../assets/images/uDock/rotate.png';
-
+import Typed from "typed.js";
+import BalloonWrenchModal from '../../components/Modals/BalloonWrenchModal';
 // * REDUX
 import { useSelector } from 'react-redux';
 // ! ~~~
@@ -26,24 +27,14 @@ function Health() {
   const [dockVisible, setDockVisible] = useState(false)
   const [consumerVisible, setConsumerVisible] = useState(true)
   const [template, setTemplate] = useState('GApps');
-// * REDUX
+  const [balloonWrenchOpen, setBalloonWrenchOpen] = useState(false)
 
 
     useEffect(() => {
       // return () => clearInterval(interval);
 }, []);
   
-  const mouseOverDock = () => {
-    if (dockVisible) {
-      setDockVisible(false)
-    } else { setDockVisible(true) }
-  }
 
-  const mouseLeaveDock = () => {
-    if (dockVisible) {
-      setDockVisible(false)
-    } else { setDockVisible(true) }
-  }
 
 //   const mouseLeaveIcon = () => {
 //       setOmniLabel('Omnibox Extension App')
@@ -74,8 +65,20 @@ function Health() {
     setDockVisible(!dockVisible)
   }
 
+  const balloonWrenchClicked = () => {
+    const iPadShellContainer = document.querySelector('.iPadShellContainer')
+    iPadShellContainer.style.pointerEvents = "none"
+    if (!balloonWrenchOpen) {
+      setBalloonWrenchOpen(true)
+    } else {
+      setBalloonWrenchOpen(false)
+    }
+
+  }
+
   return (
     <div className="mainContainer">
+        {balloonWrenchOpen && <BalloonWrenchModal />}
         <div className="iPadShellContainer"> { appSelected } 
         <img src={iPadProFrame} className="iPadShell" alt="" />
 
@@ -84,13 +87,13 @@ function Health() {
               <div  className="omniPanel">
                 <OmniboxPanel toggleDock={toggleDock} dockIconVisible='health' />
                 {dockVisible ? 
-                <div onMouseEnter={() => mouseOverDock()} onMouseLeave={()=>mouseLeaveDock()} className="dockContainer">
+                <div className="dockContainer">
                 <div className="dockWithApps">
                   <div onClick={()=>previousTemplateClicked()} className="previousTemplateContainer">
                     <img src={previousTemplate} className="previousTemplate" alt=''/>
                   </div>
 
-                  <div className="balloonWrenchContainer">
+                  <div onClick={() => balloonWrenchClicked()} className="balloonWrenchContainer">
                     <img src={balloonWrench} className="balloonWrench" alt=''/>
                   </div>  
 

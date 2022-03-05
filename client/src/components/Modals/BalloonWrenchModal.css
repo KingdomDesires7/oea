@@ -1,0 +1,85 @@
+.BWMBackground {
+    background-color: rgba(200, 200, 200);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.BWMContainer {
+    height: 500px;
+    border: 2px solid white;
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.BWMCloseButtonContainer {
+    width: 400px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 12px;
+    position: absolute;
+}
+
+.BWMCloseButton {
+    position: relative;
+    margin-right: 4px;
+    margin-top: 2px;
+}
+
+.BWMTitleContainer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    width: 400px;
+}
+
+.BWMTitle {
+    font-weight: bold;
+}
+
+.BWMOptionsContainer {
+    border: 2px solid pink;
+    height: 300px;
+    margin-top: 28px;
+    position: absolute;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.BWMOption1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+.BWMOption2Container {
+    border: 2px solid yellow;
+    height: 2000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index:999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+    perspective-origin: calc(50% + 10rem) calc(50% - 10rem);
+    perspective: 32em;
+    background: radial-gradient(#e5e5e5, #ddd);
+}
+
+.BWMOption2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 300px;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import './BalloonWrenchModal.css';
 import './3DToggle.css';
+// import cancelButton from './cancelButton';
 
 function BalloonWrenchModal() {
 
@@ -14,33 +15,45 @@ function BalloonWrenchModal() {
                 <div className="BWMTitle">Balloon Wrench</div>
             </div>
             <div className="BWMCloseButtonContainer">
-                <button onClick={()=>clicky()} className="BWMCloseButton">X</button>
+                <button onClick={()=>clicky()} className="BWMCloseButton"></button>
             </div>
 
             <div className="BWMOptionsContainer">
-                {/* <div className="BWMOption1Container">
-                    <input type='checkbox' id='c3d'/>
-                    <label for='c3d'>light</label>
-                </div> */}
-                 <div className="BWMOption1Container">
-                <input type="checkbox" id="toggle" name="toggle" value="is_on"/>
-            <label for="toggle" className="toy-toggle">
-                <span className="border1"></span>
-                <span className="border2"></span>
-                <span className="border3"></span>
-                <span className="handle">
-                    <span className="handle-off"></span>
-                    <span className="handle-on"></span>
-                        </span>
-                    </label>
-                </div> 
+                <div className="BWMOption1Contents">
 
-                <div className="BWMOption2Container">
-                    <input type='checkbox' id=''/>
+                <span className="BWMOption1TextContainer">
+                    <span className="BWMOption1Label">Toggle Typewriting</span>
+                </span>
+                 <span className="BWMOption1Container">
+                    <input type="checkbox" id="toggle" name="toggle" value="is_on"/>
+                    <label for="toggle" className="toy-toggle"></label>
+                </span> 
                 </div>
 
 
-                {/* <button className="BWMOption2">Toggle Typing</button> */}
+                <div className="BWMOption2Contents">
+
+                <span className="BWMOption2TextContainer">
+                    <span className="BWMOption2Label">Toggle Typewriting 2</span>
+                </span>
+                 <span className="BWMOption2Container">
+                    <input type="checkbox" id="toggle2" name="toggle2" value="is_on"/>
+                    <label for="toggle2" className="toy-toggle2"></label>
+                </span> 
+                </div>
+
+
+                <div className="BWMOption3Contents">
+
+                <span className="BWMOption3TextContainer">
+                    <span className="BWMOption3Label">Toggle Typewriting 3</span>
+                </span>
+                 <span className="BWMOption3Container">
+                    <input type="checkbox" id="toggle3" name="toggle3" value="is_on"/>
+                    <label for="toggle3" className="toy-toggle3"></label>
+                </span> 
+                </div>
+
             </div>
         </div>
     </div>

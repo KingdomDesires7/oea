@@ -2,7 +2,7 @@
     background-color: rgba(200, 200, 200);
     height: 100vh;
     width: 100%;
-    position: fixed;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,9 +11,12 @@
 
 .BWMContainer {
     height: 500px;
-    border: 2px solid white;
     width: 400px;
     border-radius: 8px;
+    z-index: 99999999;
+    background: rgb(120,120,120);
+    background: radial-gradient(circle, rgba(120,120,120,1) 0%, rgba(110,110,110,1) 50%, rgba(42,42,42,1) 100%);
+    border: 2px solid white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -27,8 +30,15 @@
 
 .BWMCloseButton {
     position: relative;
-    margin-right: 4px;
-    margin-top: 2px;
+    margin-right: 0px;
+    margin-top: 1px;
+    height: 28px;
+    background-color: transparent;
+    border: 2px solid transparent;
+    width: 28px;
+    background-image: url('./cancel.png');
+    background-repeat: no-repeat;
+    background-size: 23px;
 }
 
 .BWMTitleContainer {
@@ -41,10 +51,11 @@
 
 .BWMTitle {
     font-weight: bold;
+    color: #5ab3a7;
 }
 
 .BWMOptionsContainer {
-    border: 2px solid pink;
+    border: 1px solid white;
     height: 300px;
     margin-top: 28px;
     position: absolute;
@@ -53,7 +64,22 @@
     flex-direction: column;
 }
 
+.BWMOption1Contents, .BWMOption2Contents, .BWMOption3Contents  {
+    border: 1px solid white;
+    height: 200px;
+    display: flex;
+    align-items: center;
+}
 
+.BWMOption1TextContainer {
+    height: 6vh;
+    display: flex;
+    align-items: center;
+}
+
+.BWMOption1Label {
+    color:white;
+}
 
 .BWMOption1 {
     margin-top: 20px;
@@ -61,24 +87,46 @@
     width: 300px;
 }
 
-.BWMOption2Container {
-    border: 2px solid yellow;
-    height: 2000px;
+
+.BWMOption2Contents {
+    border: 1px solid white;
+    height: 200px;
+}
+
+.BWMOption2TextContainer {
+    height: 6vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    z-index:999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    height: 100vh;
-    perspective-origin: calc(50% + 10rem) calc(50% - 10rem);
-    perspective: 32em;
-    background: radial-gradient(#e5e5e5, #ddd);
+}
+
+.BWMOption2Label {
+    color:white;
 }
 
 .BWMOption2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+
+
+.BWMOption3Contents {
+    border: 1px solid white;
+    height: 200px;
+}
+
+.BWMOption3TextContainer {
+    height: 6vh;
+    display: flex;
+    align-items: center;
+}
+
+.BWMOption3Label {
+    color:white;
+}
+
+.BWMOption3 {
     margin-top: 20px;
     margin-bottom: 20px;
     width: 300px;

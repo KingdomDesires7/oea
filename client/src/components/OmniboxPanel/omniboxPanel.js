@@ -26,6 +26,7 @@ export default function OmniboxPanel({ dockIconVisible, toggleDock }) {
     }
 
     if (dockIconVisible === 'health') {
+        // alert('dsdd')
       toggleDock()
     }
 
@@ -41,7 +42,9 @@ export default function OmniboxPanel({ dockIconVisible, toggleDock }) {
         startDelay: 300,
         typeSpeed: 100,
         backSpeed: 100,
-        backDelay: 100
+        backDelay: 100,
+        loop: false,
+        loopCount: 1
       });
     }
     }, [localDockItem]);

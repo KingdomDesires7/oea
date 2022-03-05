@@ -97,6 +97,8 @@ import tasks from '../../assets/images/icons/tasks.png';
 // import tasksFilled from '../../assets/images/icons/tasks-filled.png';
 import mail from '../../assets/images/icons/mail.png';
 // import mailFilled from '../../assets/images/icons/mail-filled.png';
+import BalloonWrenchModal from '../../components/Modals/BalloonWrenchModal';
+
 
 // * REDUX \\
 import { useSelector, useDispatch } from 'react-redux';
@@ -111,6 +113,7 @@ function Home() {
   const [dockVisible, setDockVisible] = useState(false)
   const [consumerVisible, setConsumerVisible] = useState(true)
   const [template, setTemplate] = useState('GApps')
+  const [balloonWrenchOpen, setBalloonWrenchOpen] = useState(false)
   // * REDUX
   const appSelected = useSelector(state => state.appSelected);
   const dispatch = useDispatch();
@@ -133,6 +136,16 @@ function Home() {
     if (dockVisible) {
       setDockVisible(false)
     } else { setDockVisible(true) }}
+  }
+
+  const balloonWrenchClicked = () => {
+    const iPadShellContainer = document.querySelector('.iPadShellContainer')
+    iPadShellContainer.style.pointerEvents = "none"
+    if (!balloonWrenchOpen) {
+      setBalloonWrenchOpen(true)
+    } else {
+      setBalloonWrenchOpen(false)
+    }
   }
 
   const mouseOverIcon = (Icon) => {
@@ -290,6 +303,7 @@ function Home() {
 
   return (
     <div className="mainContainer">
+        {balloonWrenchOpen && <BalloonWrenchModal />}
         <div className="iPadShellContainer">
         <img src={iPadProFrame} className="iPadShell" alt="" />
 
@@ -305,7 +319,7 @@ function Home() {
                     <img src={previousTemplate} className="previousTemplate" alt=''/>
                   </div>
 
-                  <div className="balloonWrenchContainer">
+                  <div onClick={() => balloonWrenchClicked()} className="balloonWrenchContainer">
                     <img src={balloonWrench} className="balloonWrench" alt=''/>
                   </div>  
 

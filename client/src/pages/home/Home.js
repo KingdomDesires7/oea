@@ -98,11 +98,21 @@ import tasks from '../../assets/images/icons/tasks.png';
 import mail from '../../assets/images/icons/mail.png';
 // import mailFilled from '../../assets/images/icons/mail-filled.png';
 
+// * REDUX \\
+import { useSelector, useDispatch } from 'react-redux';
+import { homeAction } from '../../redux/actions';
+import { healthAction } from '../../redux/actions';
+// ! ~~~~~~~
+
+
 function Home() {
   const [omniLabel, setOmniLabel] = useState('Omnibox Extension App')
   const [dockVisible, setDockVisible] = useState(false)
   const [consumerVisible, setConsumerVisible] = useState(true)
   const [template, setTemplate] = useState('GApps')
+  // * REDUX
+  const appSelected = useSelector(state => state.appSelected);
+  const dispatch = useDispatch();
   
   const mouseOverDock = () => {
     if (dockVisible) {
@@ -247,6 +257,10 @@ function Home() {
   const treeClicked = () => {
   }
 
+  const doctorClicked = () => {
+    dispatch(healthAction())
+  }
+
   const previousTemplateClicked = () => {
     if (template === 'DApps') {} else {
       setTemplate('DApps')
@@ -267,7 +281,7 @@ function Home() {
         <img src={iPadProFrame} className="iPadShell" alt="" />
 
           <div className="iPadShell">
-            <div  className="omniPanelContainer">
+            <div className="omniPanelContainer">
               <div  className="omniPanel">
                 <OmniboxPanel dockIconVisible='home' />
                 {dockVisible ? 
@@ -327,7 +341,7 @@ function Home() {
                   </div> 
                   </Link>
                   <Link to="health">
-                    <div onClick={()=>treeClicked()} onMouseEnter={() => mouseOverIcon('doctor')} onMouseLeave={() => mouseLeaveIcon()} className="doctorContainerC">
+                    <div onClick={()=>doctorClicked()} onMouseEnter={() => mouseOverIcon('doctor')} onMouseLeave={() => mouseLeaveIcon()} className="doctorContainerC">
                       <img src={doctor} alt='' className="doctor" />
                     </div> 
                   </Link>

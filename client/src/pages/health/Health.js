@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import OmniboxPanel from '../../components/OmniboxPanel/OmniboxPanel';
 import './Health.css';
 import iPadProFrame from '../../assets/images/iPadProFrame.png';
@@ -15,13 +15,23 @@ import clock from '../../assets/images/uDock/clock.png';
 import eye from '../../assets/images/uDock/eye.png';
 // import eyeFilled from '../../assets/images/uDock/eye-filled.png';
 import rotate from '../../assets/images/uDock/rotate.png';
-
+// REDUX
+import { useSelector } from 'react-redux';
 
 function Health() {
+  const appSelected = useSelector(state => state.appSelected);
 //   const [omniLabel, setOmniLabel] = useState('Omnibox Extension App')
   const [dockVisible, setDockVisible] = useState(false)
   const [consumerVisible, setConsumerVisible] = useState(true)
-  const [template, setTemplate] = useState('GApps')
+  const [template, setTemplate] = useState('GApps');
+// * REDUX
+
+
+    useEffect(() => {
+
+      // cleanup
+      // return () => clearInterval(interval);
+}, []);
   
   const mouseOverDock = () => {
     if (dockVisible) {
@@ -62,7 +72,7 @@ function Health() {
 
   return (
     <div className="mainContainer">
-        <div className="iPadShellContainer">
+        <div className="iPadShellContainer"> { appSelected } 
         <img src={iPadProFrame} className="iPadShell" alt="" />
 
           <div className="iPadShell">

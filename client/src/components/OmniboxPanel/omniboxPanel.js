@@ -5,15 +5,10 @@ import dockFilled from '../../assets/images/OmniPanel/dockFilled.png';
 import search from '../../assets/images/OmniPanel/search.png';
 //import hamburger from '../../assets/images/OmniPanel/hamburger.png';
 
-export default function OmniboxPanel({ dockIconVisible }) {
+export default function OmniboxPanel({ dockIconVisible, toggleDock }) {
   const [ localDockItem, setLocalDockItem ] = useState(dockIconVisible)
+  const [ dockSelected, setDockSelected ] = useState(false)
 
-  // const dockIconClicked = () => {
-  //     // setLocalDockItem('notHome');
-  //     if (dockIconVisible !== 'home') {
-
-  //     }
-  // }
 
   const hamburgerClicked = () => {
     console.log(`you have clicke the burger`)
@@ -21,7 +16,18 @@ export default function OmniboxPanel({ dockIconVisible }) {
 
   const dockIconClicked = () => {
     const dockIcon = document.querySelector('.dockIcon')
-    dockIcon.src = dockFilled
+    if (!dockSelected) {
+      dockIcon.src = dockFilled
+      setDockSelected(!dockSelected)
+    } else {
+      dockIcon.src = dock
+      setDockSelected(!dockSelected)
+    }
+
+    if (dockIconVisible === 'health') {
+      toggleDock()
+    }
+
   }
 
   useEffect(() => {

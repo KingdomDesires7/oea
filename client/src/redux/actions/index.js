@@ -3,9 +3,18 @@ export const homeAction = () => {
         type: 'HOME'
     }
 }
-
-export const healthAction = () => {
+export const uHealthAction = () => {
     return {
-        type: 'HEALTH'
+        type: 'UHEALTH'
+    }
+}
+export const uDocAction = () => {
+    return {
+        type: 'UDOC'
+    }
+}
+export const uHealthInfoAction = () => {
+    return {
+        type: 'UHEALTHINFO'
     }
 }

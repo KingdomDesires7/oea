@@ -20,8 +20,18 @@ import store from '../../assets/images/DApps/store.png';
 import treeDApp from '../../assets/images/DApps/treeDApp.png';
 import web from '../../assets/images/DApps/web.png';
 import workers from '../../assets/images/DApps/workers.png';
+import { Link } from 'react-router-dom'; 
+// * REDUX
+import { uHealthAction } from '../../redux/actions';
+import { useDispatch } from 'react-redux';
 
 export default function DApps() {
+  const dispatch = useDispatch();
+
+  const healthClicked = () => {
+    dispatch(uHealthAction())
+  }
+
   return (
     <>
     <img src={Blackness} className="Blackness" alt="" />
@@ -80,12 +90,14 @@ export default function DApps() {
             <div className="DAppLabel">Fitness</div>
           </div>
 
-         <div className="housingContainer">
-          <div className="genericContainer container8">
-            <img src={health} alt="" className="DAppsIcon"/>
-          </div>
-            <div className="DAppLabel">Health</div>
-          </div>
+          <Link to='health'>
+            <div className="housingContainer">
+              <div onClick={() => healthClicked()}  className="genericContainer container8">
+                <img  src={health} alt="" className="DAppsIcon"/>
+              </div>
+                <div  className="DAppLabel">Health</div>
+              </div>
+          </Link>
 
          <div className="housingContainer">
           <div className="genericContainer container9">

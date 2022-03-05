@@ -15,8 +15,10 @@ import clock from '../../assets/images/uDock/clock.png';
 import eye from '../../assets/images/uDock/eye.png';
 // import eyeFilled from '../../assets/images/uDock/eye-filled.png';
 import rotate from '../../assets/images/uDock/rotate.png';
-// REDUX
+
+// * REDUX
 import { useSelector } from 'react-redux';
+// ! ~~~
 
 function Health() {
   const appSelected = useSelector(state => state.appSelected);
@@ -28,8 +30,6 @@ function Health() {
 
 
     useEffect(() => {
-
-      // cleanup
       // return () => clearInterval(interval);
 }, []);
   
@@ -70,6 +70,10 @@ function Health() {
     }
   }
 
+  const toggleDock = () => {
+    setDockVisible(!dockVisible)
+  }
+
   return (
     <div className="mainContainer">
         <div className="iPadShellContainer"> { appSelected } 
@@ -78,7 +82,7 @@ function Health() {
           <div className="iPadShell">
             <div  className="omniPanelContainer">
               <div  className="omniPanel">
-                <OmniboxPanel dockIconVisible='health' />
+                <OmniboxPanel toggleDock={toggleDock} dockIconVisible='health' />
                 {dockVisible ? 
                 <div onMouseEnter={() => mouseOverDock()} onMouseLeave={()=>mouseLeaveDock()} className="dockContainer">
                 <div className="dockWithApps">

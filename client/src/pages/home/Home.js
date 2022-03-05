@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 // import Router from './Router';
 // import Routes from './routes';
 import OmniboxPanel from '../../components/OmniboxPanel/OmniboxPanel';
@@ -101,7 +101,8 @@ import mail from '../../assets/images/icons/mail.png';
 // * REDUX \\
 import { useSelector, useDispatch } from 'react-redux';
 import { homeAction } from '../../redux/actions';
-import { healthAction } from '../../redux/actions';
+import { uDocAction } from '../../redux/actions';
+import { uHealthInfoAction } from '../../redux/actions';
 // ! ~~~~~~~
 
 
@@ -113,6 +114,11 @@ function Home() {
   // * REDUX
   const appSelected = useSelector(state => state.appSelected);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    // dispatch(homeAction)
+    // setOmniLabel(appSelected)
+  }, [])
   
   const mouseOverDock = () => {
     if (dockVisible) {
@@ -242,7 +248,7 @@ function Home() {
       setOmniLabel('uMail')
     }
     if (Icon === 'health') {
-      setOmniLabel('uHealth')
+      setOmniLabel('uHealthInfo')
     }
   }
 
@@ -256,11 +262,15 @@ function Home() {
 
   const treeClicked = () => {
   }
-
+// * HEALTH
   const doctorClicked = () => {
-    dispatch(healthAction())
+    dispatch(uDocAction())
   }
 
+  const healthClicked = () => {
+    dispatch(uHealthInfoAction())
+  }
+// ! ~~~
   const previousTemplateClicked = () => {
     if (template === 'DApps') {} else {
       setTemplate('DApps')
@@ -339,11 +349,6 @@ function Home() {
                   <div onClick={()=>treeClicked()} onMouseEnter={() => mouseOverIcon('tree')} onMouseLeave={() => mouseLeaveIcon()} className="treeContainerC">
                     <img src={tree} alt='' className="tree" />
                   </div> 
-                  </Link>
-                  <Link to="health">
-                    <div onClick={()=>doctorClicked()} onMouseEnter={() => mouseOverIcon('doctor')} onMouseLeave={() => mouseLeaveIcon()} className="doctorContainerC">
-                      <img src={doctor} alt='' className="doctor" />
-                    </div> 
                   </Link>
 
                   <Link to="tree">
@@ -461,7 +466,13 @@ function Home() {
                   </Link>
 
                   <Link to="health">
-                    <div onClick={()=>treeClicked()} onMouseEnter={() => mouseOverIcon('health')} onMouseLeave={() => mouseLeaveIcon()} className="healthContainerC">
+                    <div onClick={()=>doctorClicked()} onMouseEnter={() => mouseOverIcon('doctor')} onMouseLeave={() => mouseLeaveIcon()} className="doctorContainerC">
+                      <img src={doctor} alt='' className="doctor" />
+                    </div> 
+                  </Link>
+
+                  <Link to="health">
+                    <div onClick={()=>healthClicked()} onMouseEnter={() => mouseOverIcon('health')} onMouseLeave={() => mouseLeaveIcon()} className="healthContainerC">
                       <img src={health} alt='' className="health" />
                     </div> 
                   </Link>

@@ -115,13 +115,10 @@ function BalloonWrenchModal({closeBalloonWrench}) {
     <div className="radioHopping worm__segment"></div>
 </div>
 </form>
-
-
-
-            </div>
-            </div>
+        </div>
         </div>
     </div>
+</div>
   )
 }
 

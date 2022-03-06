@@ -4,7 +4,7 @@ import './Health.css';
 import iPadProFrame from '../../assets/images/iPadProFrame.png';
 import { Link } from 'react-router-dom'; 
 import balloonWrench from '../../assets/images/uDock/balloon-wrench.png';
-import HealthDock from '../../components/Docks/HealthDock';
+import HealthDock from '../../components/Docks/Health/HealthDock';
 import nextTemplate from '../../assets/images/uDock/downArrow.png';
 import previousTemplate from '../../assets/images/uDock/upArrow.png';
 // import balloonWrenchFilled from '../../assets/images/uDock/balloon-wrench-filled.png';
@@ -16,6 +16,7 @@ import eye from '../../assets/images/uDock/eye.png';
 // import eyeFilled from '../../assets/images/uDock/eye-filled.png';
 import rotate from '../../assets/images/uDock/rotate.png';
 import Typed from "typed.js";
+
 // * REDUX
 import { useSelector } from 'react-redux';
 // ! ~~~

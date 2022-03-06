@@ -19,15 +19,16 @@
     border: 2px solid white;
     box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
     position: absolute;
-    top: 219px;
+    top: 379px;
 }
 
 .BWMCloseButtonContainer {
     width: 400px;
     display: flex;
     justify-content: flex-end;
-    margin-right: 12px;
     position: absolute;
+    right: 0px;
+    top: 0.6px;
 }
 
 .BWMCloseButton {
@@ -57,11 +58,11 @@
 }
 
 .BWMOptionsContainer {
-    border: 1px solid white;
+    border-bottom: 1px solid white;
     height: 300px;
-    margin-top: 28px;
+    margin-top: 30px;
     position: absolute;
-    width: 400px;
+    width: 397px;
     display: flex;
     flex-direction: column;
 }

@@ -16,7 +16,6 @@ import eye from '../../assets/images/uDock/eye.png';
 // import eyeFilled from '../../assets/images/uDock/eye-filled.png';
 import rotate from '../../assets/images/uDock/rotate.png';
 import Typed from "typed.js";
-import BalloonWrenchModal from '../../components/Modals/BalloonWrenchModal';
 // * REDUX
 import { useSelector } from 'react-redux';
 // ! ~~~
@@ -78,7 +77,6 @@ function Health() {
 
   return (
     <div className="mainContainer">
-        {balloonWrenchOpen && <BalloonWrenchModal />}
         <div className="iPadShellContainer"> { appSelected } 
         <img src={iPadProFrame} className="iPadShell" alt="" />
 

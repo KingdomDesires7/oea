@@ -10,14 +10,16 @@
 }
 
 .BWMContainer {
-    height: 500px;
+    height: 455px;
     width: 400px;
-    border-radius: 8px;
+    border-radius: 4px;
     z-index: 99999999;
     background: rgb(120,120,120);
     background: radial-gradient(circle, rgba(120,120,120,1) 0%, rgba(110,110,110,1) 50%, rgba(42,42,42,1) 100%);
     border: 2px solid white;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    position: absolute;
+    top: 219px;
 }
 
 .BWMCloseButtonContainer {
@@ -87,6 +89,21 @@
     width: 300px;
 }
 
+.BWMOption1DescriptionContainer, .BWMOption2DescriptionContainer, .BWMOption3DescriptionContainer {
+    /* border: 2px solid white; */
+    height: 77px;
+    position: absolute;
+    display: flex;
+    justify-self: flex-end;
+    left: 250px;
+    width: 145px;
+}
+
+.BWMOption1DescriptionLabel, .BWMOption2DescriptionLabel, .BWMOption3DescriptionLabel {
+    color: white;
+    font-size: 15px;
+}
+
 
 .BWMOption2Contents {
     border: 1px solid white;
@@ -109,8 +126,6 @@
     width: 300px;
 }
 
-
-
 .BWMOption3Contents {
     border: 1px solid white;
     height: 200px;
@@ -130,4 +145,13 @@
     margin-top: 20px;
     margin-bottom: 20px;
     width: 300px;
+}
+
+.BWMOption4Contents {
+    height: 120px;
+    position: absolute;
+    top: 300px;
+    width: 394px;
+    display: flex;
+    right: 0px;
 }

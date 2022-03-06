@@ -1,0 +1,154 @@
+
+.Blackness {
+    width: 573.7px;
+    height: 700px;
+    top: 98px;
+    position: absolute;
+    /* border: 2px solid white; */
+    left: 26px;
+}
+
+.desktopAppContainer {
+    /* border: 2px solid yellow; */
+    height: 670px;
+    width: 569.7px;
+    left: 26px;
+    position: absolute;
+    top: 12.12%;
+}
+
+.desktopAppRowUno {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid green; */
+    height: calc(670px/6);
+    width: 100%;
+    position: relative;
+}
+
+.desktopAppRowDos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+    height: calc(670px/5);
+    width: 100%;
+    position: relative;
+}
+
+.desktopAppRowTres {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid yellow; */
+    height: calc(670px/5);
+    width: 100%;
+    position: relative;
+}
+
+.desktopAppRowCuatro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid orange; */
+    height: calc(670px/5);
+    width: 100%;
+    position: relative;
+}
+
+.desktopAppRowCinco {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid pink; */
+    height: calc(670px/5);
+    width: 100%;
+    position: relative;
+}
+
+.genericContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 66px;
+    min-width: 66px;
+    /* border: 1px solid white; */
+    border-radius: 14px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.DAppsIcon {
+    width: 66%;
+    height: 66%;
+}
+
+.housingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 112px;
+    flex-direction: column;
+    min-width: 77px;
+    margin-top: 17px;
+
+}
+
+.DAppLabel {
+    margin-top: 4px;
+    font-size: 16px;
+    color: white;
+}
+
+/* .container1 {
+    
+}
+.container2 {
+
+}
+.container1 {
+
+}
+.container1 {
+
+}
+.container1 {
+
+}
+.container1 {
+
+}
+.container1 {
+
+}
+.container1 {
+
+}
+.container1 {
+
+}
+.container1 {
+
+}
+.container1 {
+
+}
+.container1 {
+
+}
+.container1 {
+
+}
+.container1 {
+
+}
+.container1 {
+
+}
+.container1 {
+
+}
+.container1 {
+
+} */

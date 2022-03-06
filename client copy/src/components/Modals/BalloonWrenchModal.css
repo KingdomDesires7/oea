@@ -1,0 +1,156 @@
+.BWMBackground {
+    background-color: rgba(200, 200, 200);
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.BWMContainer {
+    height: 449px;
+    width: 400px;
+    border-radius: 4px;
+    z-index: 99999999;
+    background: rgb(120,120,120);
+    background: radial-gradient(circle, rgba(120,120,120,1) 0%, rgba(110,110,110,1) 50%, rgba(42,42,42,1) 100%);
+    border: 2px solid white;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    position: absolute;
+    top: 199px;
+}
+
+.BWMCloseButtonContainer {
+    width: 400px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 12px;
+    position: absolute;
+}
+
+.BWMCloseButton {
+    position: relative;
+    margin-right: 0px;
+    margin-top: 1px;
+    height: 28px;
+    background-color: transparent;
+    border: 2px solid transparent;
+    width: 28px;
+    background-image: url('./cancel.png');
+    background-repeat: no-repeat;
+    background-size: 23px;
+}
+
+.BWMTitleContainer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    width: 400px;
+}
+
+.BWMTitle {
+    font-weight: bold;
+    color: #5ab3a7;
+}
+
+.BWMOptionsContainer {
+    border: 1px solid white;
+    height: 300px;
+    margin-top: 28px;
+    position: absolute;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.BWMOption1Contents, .BWMOption2Contents, .BWMOption3Contents  {
+    border: 1px solid white;
+    height: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.BWMOption1TextContainer {
+    height: 6vh;
+    display: flex;
+    align-items: center;
+}
+
+.BWMOption1Label {
+    color:white;
+}
+
+.BWMOption1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+.BWMOption1DescriptionContainer, .BWMOption2DescriptionContainer, .BWMOption3DescriptionContainer {
+    /* border: 2px solid white; */
+    height: 77px;
+    position: absolute;
+    display: flex;
+    justify-self: flex-end;
+    left: 250px;
+    width: 145px;
+}
+
+.BWMOption1DescriptionLabel, .BWMOption2DescriptionLabel, .BWMOption3DescriptionLabel {
+    color: white;
+    font-size: 15px;
+}
+
+
+.BWMOption2Contents {
+    border: 1px solid white;
+    height: 200px;
+}
+
+.BWMOption2TextContainer {
+    height: 6vh;
+    display: flex;
+    align-items: center;
+}
+
+.BWMOption2Label {
+    color:white;
+}
+
+.BWMOption2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+.BWMOption3Contents {
+    border: 1px solid white;
+    height: 200px;
+}
+
+.BWMOption3TextContainer {
+    height: 6vh;
+    display: flex;
+    align-items: center;
+}
+
+.BWMOption3Label {
+    color:white;
+}
+
+.BWMOption3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+.BWMOption4Contents {
+    border: 2px solid green;
+    height: 120px;
+    position:absolute;
+    top: 300px;
+    width: 394px;
+}

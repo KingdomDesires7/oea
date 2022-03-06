@@ -148,6 +148,10 @@ function Home() {
     }
   }
 
+  const closeBalloonWrench = () => {
+    setBalloonWrenchOpen(false)
+  }
+
   const mouseOverIcon = (Icon) => {
     if (Icon === 'tree') {
       setOmniLabel('Tree of Knowledge')
@@ -303,7 +307,7 @@ function Home() {
 
   return (
     <div className="mainContainer">
-        {balloonWrenchOpen && <BalloonWrenchModal />}
+        {balloonWrenchOpen && <BalloonWrenchModal closeBalloonWrench={() => closeBalloonWrench()}/>}
         <div className="iPadShellContainer">
         <img src={iPadProFrame} className="iPadShell" alt="" />
 

@@ -1,0 +1,68 @@
+.omniboxPanelContainer {
+    width: 99.3%;
+    height: 100%;
+    border-radius: 4px;
+    border: 2px solid white; 
+    display: flex;
+    /* justify-content: center; */
+    justify-content: space-evenly;
+    align-items: center;
+    background: black;
+  }
+
+.omniboxLeftIconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 77%;
+    width: 0px;
+    position: relative;
+    right: 3px;
+}
+
+.omniboxSearchContainer {
+    /* border: 2px solid purple; */
+    width: 500px;
+    position: relative;
+    right: 7.9px;
+}
+
+.omniboxSearchInput {
+    width: 512px;
+    height: 23px;
+    border-radius: 12px;
+    border: 1.2px solid white;
+    color: white;
+    background-color: #202124;
+    font-size: 19px;
+    padding-left: 9px;
+    padding-bottom: 2.3px;
+}
+
+.hamburgerIcon {
+    background: url(data:image/png;base64,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) no-repeat right 5px center;
+    background-size: 28px;
+    background-repeat: none;
+    position: absolute;
+    bottom: -1.1px;
+    left: 493px;
+    height: 31px;
+    width: 31px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    transform: scale(.77);
+}
+
+.omniboxRightIconContainer {
+    border: 1px solid pink;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.dockIcon, .searchIcon {
+    height: 21px;
+    width: 21px;
+}
+  

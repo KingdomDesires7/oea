@@ -1,0 +1,39 @@
+.healthDockContainer {
+    position: relative;
+    height: 100%; 
+    display: flex;
+    background: rgb(81, 81, 81);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .healthDock {
+    font-family: Orpheus-Pro;
+    color: white;
+    font-size: 21px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .uDocContainer {
+    color: #5ab3a7;
+  }
+
+  .uHealthContainer {
+    color: white;
+  }
+
+  .healthAllElseContainer {
+    color: white;
+  }
+
+  .healthDockContentSpace {
+    width: 564.3px;
+    height: 678px;
+    margin-top: 718px;
+    border: 2px solid white;
+    position: absolute;
+    border-radius: 2px;
+  }

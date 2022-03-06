@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import OmniboxPanel from '../../components/OmniboxPanel/OmniboxPanel';
-import './Health.css';
+import './Legal.css';
 import iPadProFrame from '../../assets/images/iPadProFrame.png';
 import { Link } from 'react-router-dom'; 
 import balloonWrench from '../../assets/images/uDock/balloon-wrench.png';
-import HealthDock from '../../components/Docks/Health/HealthDock';
+import LegalDock from '../../components/Docks/Legal/LegalDock';
 import nextTemplate from '../../assets/images/uDock/downArrow.png';
 import previousTemplate from '../../assets/images/uDock/upArrow.png';
 // import balloonWrenchFilled from '../../assets/images/uDock/balloon-wrench-filled.png';
@@ -21,7 +21,7 @@ import Typed from "typed.js";
 import { useSelector } from 'react-redux';
 // ! ~~~
 
-function Health() {
+function Legal() {
   const appSelected = useSelector(state => state.appSelected);
 //   const [omniLabel, setOmniLabel] = useState('Omnibox Extension App')
   const [dockVisible, setDockVisible] = useState(false)
@@ -34,6 +34,12 @@ function Health() {
       // return () => clearInterval(interval);
 }, []);
   
+
+
+//   const mouseLeaveIcon = () => {
+//       setOmniLabel('Omnibox Extension App')
+//   }
+
   const rotateGrid = () => {
     setConsumerVisible(!consumerVisible)
   }
@@ -78,7 +84,7 @@ function Health() {
           <div className="iPadShell">
             <div  className="omniPanelContainer">
               <div  className="omniPanel">
-                <OmniboxPanel toggleDock={toggleDock} dockIconVisible='health' />
+                <OmniboxPanel toggleDock={toggleDock} dockIconVisible='legal' />
                 {dockVisible ? 
                 <div className="dockContainer">
                 <div className="dockWithApps">
@@ -117,7 +123,7 @@ function Health() {
               //     {"omniLabel"}
               //   </div>
               // </div>
-                  <HealthDock />
+                  <LegalDock />
                 }
 
               </div>
@@ -133,4 +139,4 @@ function Health() {
       </div>
   );
 }
-export default Health;
+export default Legal;
